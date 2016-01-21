@@ -1,0 +1,137 @@
+[
+    {
+        "_id": "b-05",
+        "_parentId": "a-05",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 0
+    },
+    {
+        "_id": "b-10",
+        "_parentId": "a-05",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 21
+    },
+    {
+        "_id": "b-15",
+        "_parentId": "a-05",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 22
+    },
+    {
+        "_id": "b-20",
+        "_parentId": "a-05",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 23
+    },
+    {
+        "_id": "b-30",
+        "_parentId": "a-06",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 24
+    },
+    {
+        "_id": "b-35",
+        "_parentId": "a-06",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-05",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 25
+    },
+    {
+        "__comment": "------------------------- assessment -------------------------",
+        "_id": "b-70",
+        "_parentId": "a-15",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-70",
+        "displayTitle": "",
+        "body": "",
+        "_trickle": {
+            "_isEnabled": true,
+            "_duration": 500,
+            "_autoScroll": true,
+            "_button": {
+                "_isEnabled": true,
+                "_styleBeforeCompletion": "hidden",
+                "_styleAfterClick": "hidden",
+                "_isFullWidth": true,
+                "_autoHide": true,
+                "_className": "",
+                "text": "Continue",
+                "finalText": "Finish",
+                "_component": "trickle-button"
+            },
+            "_stepLocking": {
+                "_isEnabled": true,
+                "_isCompletionRequired": true,
+                "_isLockedOnRevisit": false
+            },
+            "_scrollTo": "@block +1"
+        },
+        "_trackingId": 12
+    },
+    {
+        "_id": "b-75",
+        "_parentId": "a-15",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-75",
+        "displayTitle": "",
+        "body": "",
+        "_trickle": {
+            "_isEnabled": true,
+            "_duration": 500,
+            "_autoScroll": true,
+            "_button": {
+                "_isEnabled": true,
+                "_styleBeforeCompletion": "hidden",
+                "_styleAfterClick": "hidden",
+                "_isFullWidth": true,
+                "_autoHide": true,
+                "_className": "",
+                "text": "Continue",
+                "finalText": "Finish",
+                "_component": "trickle-button"
+            },
+            "_stepLocking": {
+                "_isEnabled": true,
+                "_isCompletionRequired": true,
+                "_isLockedOnRevisit": false
+            },
+            "_scrollTo": "@block +1"
+        },
+        "_trackingId": 13
+    },
+    {
+        "_id": "b-110",
+        "_parentId": "a-20",
+        "_type": "block",
+        "_classes": "",
+        "title": "b-110",
+        "displayTitle": "",
+        "body": "",
+        "_trackingId": 20
+    }
+]

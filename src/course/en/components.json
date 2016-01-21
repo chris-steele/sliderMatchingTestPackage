@@ -1,0 +1,772 @@
+[
+  {
+    "_id": "c-05",
+    "_parentId": "b-05",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Slider type component",
+    "displayTitle": "Slider - correct answer 5",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 2,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": true,
+    "_showScaleIndicator": true,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_correctAnswer": "5",
+    "_correctRange": {
+      "_bottom": null,
+      "_top": null
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-10",
+    "_parentId": "b-10",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Slider type component",
+    "displayTitle": "Slider - correct range [4-5]",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": true,
+    "_showScaleIndicator": true,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_correctAnswer": "",
+    "_correctRange": {
+      "_bottom": 4,
+      "_top": 5
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-15",
+    "_parentId": "b-15",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Slider type component",
+    "displayTitle": "Slider - Show Numbers on Scale - false",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": false,
+    "_showScaleIndicator": true,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_correctAnswer": "",
+    "_correctRange": {
+      "_bottom": 4,
+      "_top": 5
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-20",
+    "_parentId": "b-20",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "left",
+    "title": "Slider type component",
+    "displayTitle": "Slider - Show scale indicators - false",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": true,
+    "_showScaleIndicator": false,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_correctAnswer": "",
+    "_correctRange": {
+      "_bottom": 4,
+      "_top": 5
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-25",
+    "_parentId": "b-20",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "right",
+    "title": "Slider type component",
+    "displayTitle": "Slider - Show scale - false",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": true,
+    "_showScaleIndicator": true,
+    "_showScale": false,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_correctAnswer": "",
+    "_correctRange": {
+      "_bottom": 4,
+      "_top": 5
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-30",
+    "_parentId": "b-30",
+    "_classes": "",
+    "_layout": "full",
+    "_type": "component",
+    "_component": "matching",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": true,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_questionWeight": 10,
+    "title": "Matching",
+    "displayTitle": "Matching",
+    "body": "Basically what you need to do is match the questions below with the drop down box option.",
+    "instruction": "",
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "placeholder": "select an option",
+    "_items": [
+      {
+        "text": "Pick option two",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      },
+      {
+        "text": "Pick option three",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three (correct)",
+            "_isCorrect": true
+          }
+        ]
+      },
+      {
+        "text": "Pick option one",
+        "_options": [
+          {
+            "text": "Option one (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "c-35",
+    "_parentId": "b-35",
+    "_classes": "",
+    "_layout": "left",
+    "_type": "component",
+    "_component": "matching",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": true,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_questionWeight": 10,
+    "title": "Matching",
+    "displayTitle": "Matching",
+    "body": "Basically what you need to do is match the questions below with the drop down box option.",
+    "instruction": "",
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "placeholder": "select an option",
+    "_items": [
+      {
+        "text": "Pick option two",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      },
+      {
+        "text": "Pick option three",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three (correct)",
+            "_isCorrect": true
+          }
+        ]
+      },
+      {
+        "text": "Pick option one",
+        "_options": [
+          {
+            "text": "Option one (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "__comment": "------------------------- assessment -------------------------",
+    "_id": "c-70",
+    "_parentId": "b-70",
+    "_type": "component",
+    "_component": "slider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Slider type component",
+    "displayTitle": "Slider type component",
+    "body": "Question text here",
+    "instruction": "",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_questionWeight": 1,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_showNumber": true,
+    "_showScaleIndicator": true,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 1,
+    "_scaleEnd": 10,
+    "_correctAnswer": "",
+    "_correctRange": {
+      "_bottom": 4,
+      "_top": 9
+    },
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-75",
+    "_parentId": "b-75",
+    "_classes": "",
+    "_layout": "full",
+    "_type": "component",
+    "_component": "matching",
+    "_attempts": 1,
+    "_shouldDisplayAttempts": false,
+    "_isRandom": true,
+    "_canShowModelAnswer": true,
+    "_recordInteraction": true,
+    "_questionWeight": 10,
+    "title": "Matching",
+    "displayTitle": "Matching",
+    "body": "Basically what you need to do is match the questions below with the drop down box option.",
+    "instruction": "",
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_reset": {
+        "buttonText": "Reset",
+        "ariaLabel": ""
+      },
+      "_showCorrectAnswer": {
+        "buttonText": "Correct Answer",
+        "ariaLabel": ""
+      },
+      "_hideCorrectAnswer": {
+        "buttonText": "My Answer",
+        "ariaLabel": ""
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      },
+      "remainingAttemptsText": "attempts remaining",
+      "remainingAttemptText": "final attempt"
+    },
+    "_feedback": {
+      "correct": "This feedback will appear if you answered the question correctly.",
+      "_incorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered the question incorrectly."
+      },
+      "_partlyCorrect": {
+        "notFinal": "",
+        "final": "This feedback will appear if you answered part of the question correctly."
+      }
+    },
+    "placeholder": "select an option",
+    "_items": [
+      {
+        "text": "Pick option two",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      },
+      {
+        "text": "Pick option three",
+        "_options": [
+          {
+            "text": "Option one",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three (correct)",
+            "_isCorrect": true
+          }
+        ]
+      },
+      {
+        "text": "Pick option one",
+        "_options": [
+          {
+            "text": "Option one (correct)",
+            "_isCorrect": true
+          },
+          {
+            "text": "Option two",
+            "_isCorrect": false
+          },
+          {
+            "text": "Option three",
+            "_isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "c-150",
+    "_parentId": "b-110",
+    "_type": "component",
+    "_component": "assessmentResults",
+    "_classes": "",
+    "_layout": "full",
+    "_isVisibleBeforeCompletion": false,
+    "_assessmentId": "a-15",
+    "title": "Results",
+    "displayTitle": "Results",
+    "body": "",
+    "instruction": "",
+    "_retry": {
+      "button": "Retry Assessment",
+      "_comment": "use {{attempts}}, {{attemptsSpent}} and {{attemptsLeft}} to display attempts",
+      "feedback": ""
+    },
+    "_comment": "use {{score}}, {{maxScore}} and {{scoreAsPercent}} to display score and percentage",
+    "_completionBody": "{{{feedback}}}",
+    "_bands": [
+      {
+        "_score": 0,
+        "feedback": "You didn’t pass, achieving a score of {{scoreAsPercent}}%.<br><br>You didn’t do so well in the Adapt assessment demo, but don’t worry. There’s lots of information about the Adapt basics on our site. We’d also suggest you pay a visit to the forums and ask our ever helpful community to answer any questions that you might have.",
+        "_allowRetry": true
+      },
+      {
+        "_score": 40,
+        "feedback": "You didn’t pass, achieving a score of {{scoreAsPercent}}%.<br><br>You already know some of the Adapt basics but please explore our site for more information. Also pay a visit to the forums and ask our ever helpful community to answer any questions that you might have.",
+        "_allowRetry": true
+      },
+      {
+        "_score": 70,
+        "feedback": "You passed, achieving a score of {{scoreAsPercent}}%.<br><br>You’re clearly already pretty knowledgeable about Adapt so, if you haven’t already, please consider sharing your expertise on the Adapt community forums.",
+        "_allowRetry": true
+      },
+      {
+        "_score": 100,
+        "feedback": "You passed, achieving a score of {{scoreAsPercent}}%.<br><br>You’re clearly already a black belt in Adapt! If you haven’t already, please consider sharing your expertise on the Adapt community forums.",
+        "_allowRetry": false
+      }
+    ],
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  }
+]

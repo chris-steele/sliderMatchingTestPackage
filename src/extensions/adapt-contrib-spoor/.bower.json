@@ -1,0 +1,27 @@
+{
+  "name": "adapt-contrib-spoor",
+  "version": "2.0.8",
+  "framework": "^2.0.0",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-spoor",
+  "issues": "https://adaptlearning.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10100&issuetype=1&priority=6&components=10520",
+  "displayName": "Spoor",
+  "extension": "spoor",
+  "description": "An extension which allows basic SCORM tracking",
+  "main": "/js/adapt-contrib-spoor.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_spoor",
+  "_release": "2.0.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.8",
+    "commit": "0d9f7a0bd80b62845d8e71e44cb449b2b873d800"
+  },
+  "_source": "git://github.com/adaptlearning/adapt-contrib-spoor.git",
+  "_target": "~2.0.8",
+  "_originalSource": "adapt-contrib-spoor",
+  "_direct": true
+}
