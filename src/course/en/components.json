@@ -1,5 +1,97 @@
 [
   {
+    "_id": "c-03",
+    "_parentId": "b-03",
+    "_type": "component",
+    "_component": "confidenceSlider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Confidence Slider component",
+    "displayTitle": "Confidence Slider",
+    "body": "Question text here",
+    "instruction": "",
+    "_canShowFeedback": true,
+    "_recordInteraction": true,
+    "_linkedToId":"",
+    "_showNumber": true,
+    "_showScaleIndicator": true,
+    "_showScale": true,
+    "labelStart": "incomplete",
+    "labelEnd": "complete",
+    "_scaleStart": 0,
+    "_scaleEnd": 10,
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      }
+    },
+    "_feedback": {
+      "feedbackSeparator": "<br/><br/>",
+        "generic": "Thanks for measuring your confidence.",
+        "_threshold": [
+            {
+                "_values": {
+                    "_low": 1,
+                    "_high": 5
+                },
+                "text": "So you're not that confident eh? Don't worry, you will be soon."
+            },
+            {
+                "_values": {
+                    "_low": 6,
+                    "_high": 10
+                },
+                "text": "Feeling pretty confident huh? Let's see how you get on."
+            }
+        ]
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "_id": "c-04",
+    "_parentId": "b-04",
+    "_type": "component",
+    "_component": "confidenceSlider",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Linked Confidence Slider component",
+    "displayTitle": "Linked Confidence Slider",
+    "body": "Question text here",
+    "instruction": "",
+    "_canShowFeedback": true,
+    "_recordInteraction": true,
+    "_linkedToId":"c-03",
+    "_buttons": {
+      "_submit": {
+        "buttonText": "Submit",
+        "ariaLabel": "Select here to submit your answer."
+      },
+      "_showFeedback": {
+        "buttonText": "Show feedback",
+        "ariaLabel": ""
+      }
+    },
+    "_feedback": {
+      "feedbackSeparator": "<br/><br/>",
+        "generic": "Thanks for measuring your confidence.",
+        "_comparison": {
+            "lower": "Oh you like it less? That's a shame.",
+            "same": "Well, at least you don't like it less.",
+            "higher": "It looks like you're seeing the benefits more and more!"
+        }
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true
+    }
+  },
+  {
     "_id": "c-05",
     "_parentId": "b-05",
     "_type": "component",
