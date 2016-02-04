@@ -9,6 +9,7 @@
     "displayTitle": "Confidence Slider",
     "body": "Question text here",
     "instruction": "",
+    "_attempts":1,
     "_canShowFeedback": true,
     "_recordInteraction": true,
     "_linkedToId":"c-03",
