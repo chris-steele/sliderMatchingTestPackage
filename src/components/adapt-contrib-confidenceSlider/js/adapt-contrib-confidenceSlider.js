@@ -150,7 +150,7 @@ define(function(require) {
         onScreenSizeChanged: function() {
             Slider.prototype.onScreenSizeChanged.apply(this, arguments);
 
-            if (this.model.has('_linkedModel') && this.model.get('_linkedModel').get('_isSubmitted')) {
+            if (this.model.has('_linkedModel') && this.model.has('_linkedSelectedItem')) {
                 this._updateLinkedConfidenceIndicator();
             }
         },
