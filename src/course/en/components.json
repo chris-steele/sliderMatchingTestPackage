@@ -6,6 +6,7 @@
     "_component": "confidenceSlider",
     "_classes": "",
     "_layout": "full",
+    "_attempts":1,
     "title": "Confidence Slider component",
     "displayTitle": "Confidence Slider",
     "body": "Question text here",
@@ -52,7 +53,8 @@
     },
     "_pageLevelProgress": {
       "_isEnabled": true
-    }
+    },
+    "_shouldStoreResponses":true
   },
   {
     "_id": "c-04",
@@ -61,6 +63,7 @@
     "_component": "confidenceSlider",
     "_classes": "",
     "_layout": "full",
+    "_attempts":1,
     "title": "Linked Confidence Slider component",
     "displayTitle": "Linked Confidence Slider",
     "body": "Question text here",
@@ -89,7 +92,8 @@
     },
     "_pageLevelProgress": {
       "_isEnabled": true
-    }
+    },
+    "_shouldStoreResponses":true
   },
   {
     "_id": "c-05",

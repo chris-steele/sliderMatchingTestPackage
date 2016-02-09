@@ -1,8 +1,9 @@
 define([
 	'coreJS/adapt',
 	'./serializers/default',
-	'./serializers/questions'
-], function(Adapt, serializer, questions) {
+	'./serializers/questions',
+	'./serializers/bespoke'
+], function(Adapt, serializer, questions, bespoke) {
 
 	//Implements Adapt session statefulness
 	
@@ -47,6 +48,7 @@ define([
 
 			if (sessionPairs.completion) serializer.deserialize(sessionPairs.completion);
 			if (sessionPairs.questions && this._shouldStoreResponses) questions.deserialize(sessionPairs.questions);
+			if (sessionPairs.bespoke) bespoke.deserialize(sessionPairs.bespoke);
 			if (sessionPairs._isCourseComplete) Adapt.course.set('_isComplete', sessionPairs._isCourseComplete);			
 			if (sessionPairs._isAssessmentPassed) Adapt.course.set('_isAssessmentPassed', sessionPairs._isAssessmentPassed);
 		},
@@ -55,6 +57,7 @@ define([
 			var sessionPairs = {
 				"completion": serializer.serialize(),
 				"questions": (this._shouldStoreResponses == true ? questions.serialize() : ""),
+				"bespoke": bespoke.serialize(),
 				"_isCourseComplete": Adapt.course.get("_isComplete") || false,
 				"_isAssessmentPassed": Adapt.course.get('_isAssessmentPassed') || false
 			};

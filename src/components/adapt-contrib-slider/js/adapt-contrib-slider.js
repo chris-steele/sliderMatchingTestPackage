@@ -108,6 +108,8 @@ define([
         },
 
         setAllItemsEnabled: function(isEnabled) {
+            if (!this.model.get('_isReady')) return;
+
             if (isEnabled) {
                 this.$('.slider-widget').removeClass('disabled');
                 this.$slider.prop('disabled', false);

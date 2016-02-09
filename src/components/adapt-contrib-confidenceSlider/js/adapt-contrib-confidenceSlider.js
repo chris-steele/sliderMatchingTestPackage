@@ -1,6 +1,7 @@
 define(function(require) {
     var Slider = require('components/adapt-contrib-slider/js/adapt-contrib-slider');
     var Adapt = require('coreJS/adapt');
+    var AdaptStatefulSession = require('extensions/adapt-contrib-spoor/js/adapt-stateful-session');
 
     var ConfidenceSlider = Slider.extend({
 
@@ -71,7 +72,9 @@ define(function(require) {
         },
 
         _updateLinkedConfidenceIndicator: function() {
-            var linkedSelectedItemIndex = this.getIndexFromValue(this.model.get('_linkedSelectedItem').value);
+            var linkedModel = this.model.get('_linkedModel');
+            var linkedValue = linkedModel.has('_selectedItem') ? linkedModel.get('_selectedItem').value : linkedModel.get('_userAnswer');
+            var linkedSelectedItemIndex = this.getIndexFromValue(linkedValue);
 
             this.$('.linked-confidence-bar').css({
                 width: this.mapIndexToPixels(linkedSelectedItemIndex) + this.$slider.data('plugin_rangeslider').grabPos
@@ -109,8 +112,9 @@ define(function(require) {
         },
 
         _getComparisonFeedback: function() {
-            var confidence = this.model.get('_selectedItem').value,
-                linkedConfidence = this.model.get('_linkedSelectedItem').value,
+            var linkedModel = this.model.get('_linkedModel'),
+                confidence = this.model.get('_selectedItem').value,
+                linkedConfidence = linkedModel.has('_selectedItem') ? linkedModel.get('_selectedItem').value : linkedModel.get('_userAnswer'),
                 feedbackString;
             if (linkedConfidence < confidence) {
                 feedbackString = this.model.get('_feedback')._comparison.higher;
@@ -138,21 +142,32 @@ define(function(require) {
             if (this.model.has('_linkedModel')) {
                 this.$('.rangeslider').prepend($('<div class="linked-confidence-bar"/>'))
                 this._listenToLinkedModel();
-                if(this.model.get('_linkedModel').get('_isSubmitted')) {
-                    this.onLinkedConfidenceChanged(this.model.get('_linkedModel'));
+                if (this.model.get('_linkedModel').has('_selectedItem') || this.model.get('_linkedModel').has('_userAnswer')) {
+                    this.onLinkedConfidenceChanged();
                 } else {
                     this.model.set('_isEnabled', false);
                     //this.$('.linkedConfidenceSlider-body').html(this.model.get('disabledBody'));
                 }
+            }
+
+            if (this.model.get('_isSubmitted') && this.model.has('_userAnswer')) {
+                this.model.set('feedbackTitle', this.model.get('title'));
+                this.model.set('feedbackMessage', this._getFeedbackString());
             }
         },
 
         onScreenSizeChanged: function() {
             Slider.prototype.onScreenSizeChanged.apply(this, arguments);
 
-            if (this.model.has('_linkedModel') && this.model.has('_linkedSelectedItem')) {
+            if (this.model.has('_linkedModel') && this.model.get('_linkedModel').has('_selectedItem')) {
                 this._updateLinkedConfidenceIndicator();
             }
+        },
+
+        onSubmitClicked: function() {
+            Slider.prototype.onSubmitClicked.apply(this, arguments);
+
+            AdaptStatefulSession.saveSessionState();
         },
 
         onButtonsRendered:function(buttonsView) {
@@ -160,9 +175,7 @@ define(function(require) {
             if (!this.model.get('_isEnabled') && this.buttonsView == buttonsView) this.$('.buttons-action').a11y_cntrl_enabled(false);
         },
 
-        onLinkedConfidenceChanged: function(linkedModel) {
-            var linkedSelectedItem = linkedModel.get('_selectedItem');
-            this.model.set('_linkedSelectedItem', linkedSelectedItem);
+        onLinkedConfidenceChanged: function() {
             this._updateLinkedConfidenceIndicator();
         },
 

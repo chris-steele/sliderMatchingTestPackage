@@ -21,6 +21,9 @@ With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run 
     (This second method will reinstall all plug-ins listed in *adapt.json*.)  
 
 * If **Confidence Slider** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
+
+Included in the package is a script which supports tracking of user-specified Confidence Slider responses. See [bespoke.js](js/bespoke.js) for more details. This must be used in conjuction with [adapt-contrib-spoor](https://github.com/adaptlearning/adapt-contrib-spoor) and integrated manually. Alternatively, if **_spoor._tracking._shouldStoreResponses** (see *config.json*) is enabled, responses to all Confidence Slider instances will be tracked and this script is not required.
+
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ## Settings Overview
@@ -83,6 +86,8 @@ guide the learner’s interaction with the component.
 >>>**_high** (number): The upper bound of the range (inclusive).
 
 >>**text** (string): The text that will be included in the feedback if the user's selection falls with the range specified by **_values**.
+
+**_shouldStoreResponses** (boolean): Optional. When set to `true`, the user response will be tracked on submission. For use only with adapt-contrib-spoor and the bespoke tracking script included in this package. If **_spoor._tracking._shouldStoreResponses** (see *config.json*) is set to `true`, the value specified here is overridden. See installation for more details.
 
 ### Accessibility
 **Confidence Slider** has been assigned a label using the [aria-label](https://github.com/adaptlearning/adapt_framework/wiki/Aria-Labels) attribute: **ariaRegion**. This label is not a visible element. It is utilized by assistive technology such as screen readers. Should the region's text need to be customised, it can be found within the **globals** object in [*properties.schema*](https://github.com/adaptlearning/adapt-contrib-confidenceSlider/blob/master/properties.schema).   

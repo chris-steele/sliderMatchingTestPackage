@@ -5,11 +5,11 @@
     "_component": "confidenceSlider",
     "_classes": "",
     "_layout": "full",
+    "_attempts":1,
     "title": "Confidence Slider component",
     "displayTitle": "Confidence Slider",
     "body": "Question text here",
     "instruction": "",
-    "_attempts":1,
     "_canShowFeedback": true,
     "_recordInteraction": true,
     "_linkedToId":"c-03",
@@ -54,5 +54,6 @@
     },
     "_pageLevelProgress": {
         "_isEnabled": true
-    }
+    },
+    "_shouldStoreResponses":true
 }
