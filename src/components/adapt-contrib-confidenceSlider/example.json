@@ -25,6 +25,10 @@
             "buttonText": "Submit",
             "ariaLabel": "Select here to submit your answer."
         },
+        "_reset": {
+            "buttonText": "Reset",
+            "ariaLabel": "Reset the question by clicking here."
+        },
         "_showFeedback": {
             "buttonText": "Show feedback",
             "ariaLabel": ""

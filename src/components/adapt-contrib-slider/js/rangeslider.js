@@ -373,7 +373,7 @@
         newPos = this.getPositionFromValue(value);
 
         // Update ui
-        this.$fill[0].style[this.DIMENSION] = (newPos + this.grabPos) + 'px';
+        this.$fill[0].style[this.DIMENSION] = value == this.max ? '100%' : (newPos + this.grabPos) + 'px';
         this.$handle[0].style[this.DIRECTION_STYLE] = newPos + 'px';
         this.setValue(value);
 

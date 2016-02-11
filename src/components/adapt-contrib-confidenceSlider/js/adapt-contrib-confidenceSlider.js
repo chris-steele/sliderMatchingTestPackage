@@ -6,6 +6,18 @@ define(function(require) {
     var ConfidenceSlider = Slider.extend({
 
         /* override */
+        preRender:function() {
+            this.model.set('_isEnabled', true);
+            Slider.prototype.preRender.apply(this, arguments);
+        },
+
+        setupDefaultSettings: function() {
+            Slider.prototype.setupDefaultSettings.apply(this, arguments);
+            this.model.set('_canShowModelAnswer', false);
+            if (!this.model.has('_attempts') || this.model.get('_attempts') > 1) this.model.set('_attempts', 1);
+        },
+
+        /* override */
         setupQuestion: function() {
             if (this.model.get('_linkedToId')) {
                 this._setupLinkedModel();
@@ -40,16 +52,24 @@ define(function(require) {
         },
 
         /* override */
+        restoreUserAnswers: function() {
+            if (!this.model.get('_isSubmitted')) return;
+
+            // this is only necessary to avoid an issue when using adapt-cheat
+            if (!this.model.has('_userAnswer')) this.model.set('_userAnswer', this.model.get('_items')[0].value);
+
+            Slider.prototype.restoreUserAnswers.apply(this, arguments);
+        },
+
+        /* override */
         canSubmit: function() {
             return !this.model.has('_linkedModel') || this.model.get('_linkedModel').get('_isSubmitted');
         },
 
         /* override */
-        showFeedback: function() {
+        setupFeedback: function(){
             this.model.set('feedbackTitle', this.model.get('title'));
             this.model.set('feedbackMessage', this._getFeedbackString());
-
-            Slider.prototype.showFeedback.apply(this, arguments);
         },
 
         _setupLinkedModel: function() {
@@ -64,6 +84,7 @@ define(function(require) {
                 '_scaleEnd':linkedModel.get('_scaleEnd'),
             });
             this.model.set('_linkedModel', linkedModel);
+            if (this.model.get('_attempts') < 0) linkedModel.set('_attempts', 1);
         },
 
         _listenToLinkedModel: function() {
@@ -72,13 +93,17 @@ define(function(require) {
         },
 
         _updateLinkedConfidenceIndicator: function() {
-            var linkedModel = this.model.get('_linkedModel');
-            var linkedValue = linkedModel.has('_selectedItem') ? linkedModel.get('_selectedItem').value : linkedModel.get('_userAnswer');
-            var linkedSelectedItemIndex = this.getIndexFromValue(linkedValue);
+            var lm = this.model.get('_linkedModel');
+            var linkedValue = lm.get('_isSubmitted') && lm.has('_userAnswer') ? lm.get('_userAnswer') : lm.get('_selectedItem').value;
+            var rangeslider = this.$slider.data('plugin_rangeslider');
 
-            this.$('.linked-confidence-bar').css({
-                width: this.mapIndexToPixels(linkedSelectedItemIndex) + this.$slider.data('plugin_rangeslider').grabPos
-            })
+            if (linkedValue == this.model.get('_scaleEnd')) {
+                this.$('.linked-confidence-bar').css({width: '100%'});
+            }
+            else {
+                // follow rangeslider setPosition method
+                this.$('.linked-confidence-bar').css({width: (rangeslider.getPositionFromValue(linkedValue) + rangeslider.grabPos) + 'px'});
+            }
         },
 
         _getFeedbackString: function() {
@@ -112,9 +137,9 @@ define(function(require) {
         },
 
         _getComparisonFeedback: function() {
-            var linkedModel = this.model.get('_linkedModel'),
+            var lm = this.model.get('_linkedModel'),
                 confidence = this.model.get('_selectedItem').value,
-                linkedConfidence = linkedModel.has('_selectedItem') ? linkedModel.get('_selectedItem').value : linkedModel.get('_userAnswer'),
+                linkedConfidence = lm.get('_isSubmitted') && lm.has('_userAnswer') ? lm.get('_userAnswer') : lm.get('_selectedItem').value,
                 feedbackString;
             if (linkedConfidence < confidence) {
                 feedbackString = this.model.get('_feedback')._comparison.higher;
@@ -142,11 +167,11 @@ define(function(require) {
             if (this.model.has('_linkedModel')) {
                 this.$('.rangeslider').prepend($('<div class="linked-confidence-bar"/>'))
                 this._listenToLinkedModel();
-                if (this.model.get('_linkedModel').has('_selectedItem') || this.model.get('_linkedModel').has('_userAnswer')) {
+                if (this.model.get('_linkedModel').get('_isSubmitted')) {
                     this.onLinkedConfidenceChanged();
                 } else {
                     this.model.set('_isEnabled', false);
-                    //this.$('.linkedConfidenceSlider-body').html(this.model.get('disabledBody'));
+                    this.$('.component-body-inner').html(this.model.get('disabledBody'));
                 }
             }
 
@@ -159,9 +184,18 @@ define(function(require) {
         onScreenSizeChanged: function() {
             Slider.prototype.onScreenSizeChanged.apply(this, arguments);
 
-            if (this.model.has('_linkedModel') && this.model.get('_linkedModel').has('_selectedItem')) {
+            // if linked slider on same page update it with user interaction
+            if (this.model.has('_linkedModel') && this.model.get('_linkedModel').get('_isReady')) {
                 this._updateLinkedConfidenceIndicator();
             }
+        },
+
+        onResetClicked: function() {
+            Slider.prototype.onResetClicked.apply(this, arguments);
+
+            this.model.reset('hard', true);
+
+            AdaptStatefulSession.saveSessionState();
         },
 
         onSubmitClicked: function() {
@@ -172,7 +206,13 @@ define(function(require) {
 
         onButtonsRendered:function(buttonsView) {
             // necessary due to deferred ButtonsView::postRender
-            if (!this.model.get('_isEnabled') && this.buttonsView == buttonsView) this.$('.buttons-action').a11y_cntrl_enabled(false);
+            if (this.buttonsView == buttonsView) {
+                if (!this.model.get('_isEnabled')) {
+                    if (!this.model.has('_linkedModel') || !this.model.get('_linkedModel').get('_isSubmitted')) {
+                        this.$('.buttons-action').a11y_cntrl_enabled(false);
+                    }
+                }
+            }
         },
 
         onLinkedConfidenceChanged: function() {
@@ -183,6 +223,20 @@ define(function(require) {
             if (linkedModel.get('_isSubmitted')) {
                 this.model.set('_isEnabled', true);
             }
+            else {
+                this.model.set('_isEnabled', false);
+            }
+        },
+
+        /* override */
+        updateButtons: function() {
+            if (this.model.get('_attempts') > 0) {
+                Slider.prototype.updateButtons.apply(this, arguments);
+            }
+            else {
+                this.model.set('_buttonState', this.model.get('_isEnabled') ? 'submit' : 'reset');
+            }
+
         }
     }, {
         template:'confidenceSlider'
