@@ -42,6 +42,8 @@ In addition to the attributes specifically listed below, [*question components*]
 
 **_layout** (string): This defines the horizontal position of the component in the block. Acceptable values are `full`, `left` or `right`.  
 
+**disabledBody** (string): This optional text appears in place of the **body** text when the confidence slider to which this one is linked has not been answered.
+
 **instruction** (string): This optional text appears above the component. It is frequently used to
 guide the learner’s interaction with the component.  
   

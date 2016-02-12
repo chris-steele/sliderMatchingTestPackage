@@ -1,6 +1,6 @@
 {
-    "_id": "c-04",
-    "_parentId": "b-04",
+    "_id": "c-05",
+    "_parentId": "b-05",
     "_type": "component",
     "_component": "confidenceSlider",
     "_classes": "",
@@ -9,6 +9,7 @@
     "title": "Confidence Slider component",
     "displayTitle": "Confidence Slider",
     "body": "Question text here",
+    "disabledBody":"You need to measure your confidence in the linked part before you can do this part.",
     "instruction": "",
     "_canShowFeedback": true,
     "_recordInteraction": true,
@@ -23,7 +24,7 @@
     "_buttons": {
         "_submit": {
             "buttonText": "Submit",
-            "ariaLabel": "Select here to submit your answer."
+            "ariaLabel": "Submit your answer by clicking here."
         },
         "_reset": {
             "buttonText": "Reset",
@@ -31,7 +32,7 @@
         },
         "_showFeedback": {
             "buttonText": "Show feedback",
-            "ariaLabel": ""
+            "ariaLabel": "View the question feedback again by clicking here."
         }
     },
     "_feedback": {
